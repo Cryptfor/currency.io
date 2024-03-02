@@ -1,0 +1,561 @@
+
+
+@charset "utf-8";
+
+/*========= 背景動画設定のCSS ===============*/
+
+/*header設定*/
+#header{
+    position: relative;/*h1の中央寄せ配置の起点とするためのrelative*/
+    height: 100vh;/*高さを全画面にあわせる*/
+} 
+.btn1{
+    /*線の基点とするためrelativeを指定*/
+    position: absolute;
+    top: 55%;
+    left: 23%;
+    width: 105px; /* 幅を指定 */
+    height: 25px; /* 高さを指定 */
+    transform: translate(-50%, -50%);
+    display: inline-block;
+    color: #12555c;
+    
+    padding: 10px 20px;
+    background:#eee;
+    text-decoration: none;
+    outline: none;
+    /*アニメーションの指定*/
+    transition: all .3s;
+    transition-delay: .7s;/*0.7秒遅れてアニメーション*/
+}
+
+/*hoverした際の、ボタンの背景とテキスト色の変更*/
+.btn1:hover{
+  background:#333;
+  color: #fff;
+}
+
+/*線の設定*/
+.btn1 span{
+    display: block;
+}
+
+/*横線の設定*/
+.btn1::before,
+.btn1::after{
+    content:"";
+    /*絶対配置で線の位置を決める*/   
+    position: absolute;
+    /*線の形状*/   
+    width: 0;
+    height: 2px;
+    background: #333;
+    /*アニメーションの指定*/
+    transition: all 0.2s linear;
+}
+
+/*縦線の設定*/
+.btn1 span::before,
+.btn1 span::after{
+    content:"";
+    /*絶対配置で線の位置を決める*/   
+    position: absolute;
+    /*線の形状*/
+    width:2px;
+    height:0;
+    background: #333;
+    /*アニメーションの指定*/
+    transition: all 0.2s linear;
+}
+
+/*hoverした際、線が縦横100%伸びる*/
+.btn1:hover::before,
+.btn1:hover::after{
+    width: 100%;
+}
+.btn1:hover span::before,
+.btn1:hover span::after{
+    height: 100%;
+}
+
+/*== 左下⇒右下⇒右上⇒左上⇒左下に枠線が伸びて塗りに */
+
+/*左下から右下へ伸びる横線*/
+.bordercircle2::after{
+    left: 0;
+    bottom: 0;
+}
+
+/*右下から上へ伸びる縦線*/
+.bordercircle2 span::after{
+    right: 0;
+    bottom: 0;
+    transition-delay: 0.2s;
+}
+
+/*右上から左上へ伸びる横線*/
+.bordercircle2::before{
+    right: 0;
+    top: 0;
+    transition-delay: 0.4s;
+}
+
+/*左上から左下へ伸びる横線*/
+.bordercircle2 span::before{
+    left: 0;
+    top: 0;
+    transition-delay: 0.6s;
+}
+
+.btn2{
+    /*線の基点とするためrelativeを指定*/
+    position: absolute;
+    top: 55%;
+    left: 36%;
+    width: 100px; /* 幅を指定 */
+    height: 25px; /* 高さを指定 */
+    transform: translate(-50%, -50%);
+    display: inline-block;
+    color: #12555c;
+    
+    padding: 10px 20px;
+    background:#eee;
+    text-decoration: none;
+    outline: none;
+    /*アニメーションの指定*/
+    transition: all .3s;
+    transition-delay: .7s;/*0.7秒遅れてアニメーション*/
+}
+
+/*hoverした際の、ボタンの背景とテキスト色の変更*/
+.btn2:hover{
+  background:#333;
+  color: #fff;
+}
+
+/*線の設定*/
+.btn2 span{
+    display: block;
+}
+
+/*横線の設定*/
+.btn2::before,
+.btn2::after{
+    content:"";
+    /*絶対配置で線の位置を決める*/   
+    position: absolute;
+    /*線の形状*/   
+    width: 0;
+    height: 2px;
+    background: #333;
+    /*アニメーションの指定*/
+    transition: all 0.2s linear;
+}
+
+/*縦線の設定*/
+.btn2 span::before,
+.btn2 span::after{
+    content:"";
+    /*絶対配置で線の位置を決める*/   
+    position: absolute;
+    /*線の形状*/
+    width:2px;
+    height:0;
+    background: #333;
+    /*アニメーションの指定*/
+    transition: all 0.2s linear;
+}
+
+/*hoverした際、線が縦横100%伸びる*/
+.btn2:hover::before,
+.btn2:hover::after{
+    width: 100%;
+}
+.btn2:hover span::before,
+.btn2:hover span::after{
+    height: 100%;
+}
+
+/*== 左下⇒右下⇒右上⇒左上⇒左下に枠線が伸びて塗りに */
+
+/*左下から右下へ伸びる横線*/
+.bordercircle2::after{
+    left: 0;
+    bottom: 0;
+}
+
+/*右下から上へ伸びる縦線*/
+.bordercircle2 span::after{
+    right: 0;
+    bottom: 0;
+    transition-delay: 0.2s;
+}
+
+/*右上から左上へ伸びる横線*/
+.bordercircle2::before{
+    right: 0;
+    top: 0;
+    transition-delay: 0.4s;
+}
+
+/*左上から左下へ伸びる横線*/
+.bordercircle2 span::before{
+    left: 0;
+    top: 0;
+    transition-delay: 0.6s;
+}
+
+.btn3{
+    /*線の基点とするためrelativeを指定*/
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    width: 130px; /* 幅を指定 */
+    height: 25px; /* 高さを指定 */
+    transform: translate(-50%, -50%);
+    display: inline-block;
+    color: #12555c;
+    
+    padding: 10px 20px;
+    background:#eee;
+    text-decoration: none;
+    outline: none;
+    /*アニメーションの指定*/
+    transition: all .3s;
+    transition-delay: .7s;/*0.7秒遅れてアニメーション*/
+}
+
+/*hoverした際の、ボタンの背景とテキスト色の変更*/
+.btn3:hover{
+  background:#333;
+  color: #fff;
+}
+
+/*線の設定*/
+.btn3 span{
+    display: block;
+}
+
+/*横線の設定*/
+.btn3::before,
+.btn3::after{
+    content:"";
+    /*絶対配置で線の位置を決める*/   
+    position: absolute;
+    /*線の形状*/   
+    width: 0;
+    height: 2px;
+    background: #333;
+    /*アニメーションの指定*/
+    transition: all 0.2s linear;
+}
+
+/*縦線の設定*/
+.btn3 span::before,
+.btn3 span::after{
+    content:"";
+    /*絶対配置で線の位置を決める*/   
+    position: absolute;
+    /*線の形状*/
+    width:2px;
+    height:0;
+    background: #333;
+    /*アニメーションの指定*/
+    transition: all 0.2s linear;
+}
+
+/*hoverした際、線が縦横100%伸びる*/
+.btn3:hover::before,
+.btn3:hover::after{
+    width: 100%;
+}
+.btn3:hover span::before,
+.btn3:hover span::after{
+    height: 100%;
+}
+
+/*== 左下⇒右下⇒右上⇒左上⇒左下に枠線が伸びて塗りに */
+
+/*左下から右下へ伸びる横線*/
+.bordercircle2::after{
+    left: 0;
+    bottom: 0;
+}
+
+/*右下から上へ伸びる縦線*/
+.bordercircle2 span::after{
+    right: 0;
+    bottom: 0;
+    transition-delay: 0.2s;
+}
+
+/*右上から左上へ伸びる横線*/
+.bordercircle2::before{
+    right: 0;
+    top: 0;
+    transition-delay: 0.4s;
+}
+
+/*左上から左下へ伸びる横線*/
+.bordercircle2 span::before{
+    left: 0;
+    top: 0;
+    transition-delay: 0.6s;
+}
+
+.btn4{
+    /*線の基点とするためrelativeを指定*/
+    position: absolute;
+    top: 55%;
+    left: 64%;
+    width: 100px; /* 幅を指定 */
+    height: 25px; /* 高さを指定 */
+    transform: translate(-50%, -50%);
+    display: inline-block;
+    color: #12555c;
+    
+    padding: 10px 20px;
+    background:#eee;
+    text-decoration: none;
+    outline: none;
+    /*アニメーションの指定*/
+    transition: all .3s;
+    transition-delay: .7s;/*0.7秒遅れてアニメーション*/
+}
+
+/*hoverした際の、ボタンの背景とテキスト色の変更*/
+.btn4:hover{
+  background:#333;
+  color: #fff;
+}
+
+/*線の設定*/
+.btn4 span{
+    display: block;
+}
+
+/*横線の設定*/
+.btn4::before,
+.btn4::after{
+    content:"";
+    /*絶対配置で線の位置を決める*/   
+    position: absolute;
+    /*線の形状*/   
+    width: 0;
+    height: 2px;
+    background: #333;
+    /*アニメーションの指定*/
+    transition: all 0.2s linear;
+}
+
+/*縦線の設定*/
+.btn4 span::before,
+.btn4 span::after{
+    content:"";
+    /*絶対配置で線の位置を決める*/   
+    position: absolute;
+    /*線の形状*/
+    width:2px;
+    height:0;
+    background: #333;
+    /*アニメーションの指定*/
+    transition: all 0.2s linear;
+}
+
+/*hoverした際、線が縦横100%伸びる*/
+.btn4:hover::before,
+.btn4:hover::after{
+    width: 100%;
+}
+.btn4:hover span::before,
+.btn4:hover span::after{
+    height: 100%;
+}
+
+/*== 左下⇒右下⇒右上⇒左上⇒左下に枠線が伸びて塗りに */
+
+/*左下から右下へ伸びる横線*/
+.bordercircle2::after{
+    left: 0;
+    bottom: 0;
+}
+
+/*右下から上へ伸びる縦線*/
+.bordercircle2 span::after{
+    right: 0;
+    bottom: 0;
+    transition-delay: 0.2s;
+}
+
+/*右上から左上へ伸びる横線*/
+.bordercircle2::before{
+    right: 0;
+    top: 0;
+    transition-delay: 0.4s;
+}
+
+/*左上から左下へ伸びる横線*/
+.bordercircle2 span::before{
+    left: 0;
+    top: 0;
+    transition-delay: 0.6s;
+}
+
+.btn5{
+    /*線の基点とするためrelativeを指定*/
+    position: absolute;
+    top: 55%;
+    left: 77%;
+    width: 105px; /* 幅を指定 */
+    height: 25px; /* 高さを指定 */
+    transform: translate(-50%, -50%);
+    display: inline-block;
+    color: #12555c;
+    
+    padding: 10px 20px;
+    background:#eee;
+    text-decoration: none;
+    outline: none;
+    /*アニメーションの指定*/
+    transition: all .3s;
+    transition-delay: .7s;/*0.7秒遅れてアニメーション*/
+}
+
+/*hoverした際の、ボタンの背景とテキスト色の変更*/
+.btn5:hover{
+  background:#333;
+  color: #fff;
+}
+
+/*線の設定*/
+.btn5 span{
+    display: block;
+}
+
+/*横線の設定*/
+.btn5::before,
+.btn5::after{
+    content:"";
+    /*絶対配置で線の位置を決める*/   
+    position: absolute;
+    /*線の形状*/   
+    width: 0;
+    height: 2px;
+    background: #333;
+    /*アニメーションの指定*/
+    transition: all 0.2s linear;
+}
+
+/*縦線の設定*/
+.btn5 span::before,
+.btn5 span::after{
+    content:"";
+    /*絶対配置で線の位置を決める*/   
+    position: absolute;
+    /*線の形状*/
+    width:2px;
+    height:0;
+    background: #333;
+    /*アニメーションの指定*/
+    transition: all 0.2s linear;
+}
+
+/*hoverした際、線が縦横100%伸びる*/
+.btn5:hover::before,
+.btn5:hover::after{
+    width: 100%;
+}
+.btn5:hover span::before,
+.btn5:hover span::after{
+    height: 100%;
+}
+
+/*== 左下⇒右下⇒右上⇒左上⇒左下に枠線が伸びて塗りに */
+
+/*左下から右下へ伸びる横線*/
+.bordercircle2::after{
+    left: 0;
+    bottom: 0;
+}
+
+/*右下から上へ伸びる縦線*/
+.bordercircle2 span::after{
+    right: 0;
+    bottom: 0;
+    transition-delay: 0.2s;
+}
+
+/*右上から左上へ伸びる横線*/
+.bordercircle2::before{
+    right: 0;
+    top: 0;
+    transition-delay: 0.4s;
+}
+
+/*左上から左下へ伸びる横線*/
+.bordercircle2 span::before{
+    left: 0;
+    top: 0;
+    transition-delay: 0.6s;
+}
+/*========= レイアウトのためのCSS ===============*/
+
+body{
+    vertical-align:middle; 
+    padding: 100px 0;
+    text-align: center;
+}
+
+p{
+    margin: 0 0 10px 0;
+}
+
+
+
+#video-area{
+    position: fixed;
+    z-index: -1;/*最背面に設定*/
+    top: 0;
+    right:0;
+    left:0;
+    bottom:0;
+    overflow: hidden;
+}
+
+#video {
+    /*天地中央配置*/
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /*縦横幅指定*/
+    width: 177.77777778vh; /* 16:9 の幅→16 ÷ 9＝ 177.77% */
+    height: 56.25vw; /* 16:9の幅 → 9 ÷ 16 = 56.25% */
+    min-height: 100%;
+    min-width: 100%;
+    filter: brightness(0.5);
+}
+
+/*見出し設定*/
+h1{
+    /*要素の配置*/
+    position:absolute;
+    /*要素を天地中央寄せ*/
+    font-size: 40px;
+    top: 10%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%) ;
+    /*見た目の調整*/
+    color:#fff;
+    text-shadow: 0 0 20px #666;
+}
+
+/*========= レイアウトのためのCSS ===============*/
+
+#container{
+  background:#fff;
+  padding:300px 0;
+  text-align: center;
+}
+
