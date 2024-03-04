@@ -3,7 +3,10 @@
 @charset "utf-8";
 
 /*========= 背景動画設定のCSS ===============*/
-
+*{
+    margin: 0px;
+    padding: 0px;
+}
 /*header設定*/
 #header{
     position: relative;/*h1の中央寄せ配置の起点とするためのrelative*/
