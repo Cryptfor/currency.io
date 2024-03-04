@@ -1,11 +1,11 @@
-
-
 <!DOCTYPE html>
 <html lang="ja">
 <head>
+<meta charset="utf-8">
+<title>エンジニアによる暗号資産解体新書</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  
-<!-- Google tag (gtag.js) -->
+<!-- Google Tag Manager -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-MY69N0K4G8"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -14,37 +14,42 @@
 
   gtag('config', 'G-MY69N0K4G8');
 </script>
+<!-- /Google Tag Manager -->
 
-<meta charset="utf-8">
-<title>エンジニアによる暗号資産解体新書</title>
-<meta name="viewport" content="width=device-width,initial-scale=1.0">  
-  
-<!--==============レイアウトを制御する独自のCSSを読み込み===============-->
+<!-- レイアウトを制御する独自のCSSを読み込み -->
 <link rel="stylesheet" type="text/css" href="CSS/background.css">
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        overflow-x: auto;
+    }
+
+    header {
+        text-align: center; /* テキストを中央に配置 */
+        background-color: #f0f0f0; /* 背景色を設定 */
+        padding: 20px; /* 上下左右に余白を設定 */
+    }
+
+    #video-area {
+        margin-top: 20px; /* 動画エリアとヘッダーの間に余白を設定 */
+    }
+</style>
 </head>
 <body> 
-<header id="header">
-  <h1>エンジニアによる<br/>暗号資産解体新書</h1>
+<header>
+    <h1>エンジニアによる<br/>暗号資産解体新書</h1>
     <a href="index.html" class="btn1 bordercircle2"><span>トップページ</span></a>
     <a href="#" class="btn2 bordercircle2"><span>口座開設方法</span></a>
     <a href="#" class="btn3 bordercircle2"><span>暗号試算単語索引</span></a>
     <a href="#" class="btn4 bordercircle2"><span>お問合せ</span></a>
     <a href="#" class="btn5 bordercircle2"><span>SNS</span></a>
     <div id="video-area">
-  <video id="video" webkit-playsinline playsinline muted autoplay loop>
-    <!--
-        poster：動画ファイルが利用できない環境で代替表示される画像
-        webkit-playsinline：iOS 9までのSafari用インライン再生指定
-        playsinline：iOS 10以降のSafari用インライン再生指定
-        muted：音声をミュートさせる
-        autoplay：動画を自動再生させる
-        loop：動画をループさせる
-        controls：コントロールバーを表示する
-    -->
-  <source src="video/184941 (Original).mp4" type="video/mp4">
-  <p>動画を再生できる環境ではありません。</p>
-  </video>
-    <!--/video-area--></div>
+        <video id="video" webkit-playsinline playsinline muted autoplay loop>
+            <source src="video/184941 (Original).mp4" type="video/mp4">
+            <p>動画を再生できる環境ではありません。</p>
+        </video>
+    </div>
 </header>
 </body>
 </html>
