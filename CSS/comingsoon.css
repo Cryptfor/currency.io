@@ -1,0 +1,128 @@
+
+
+@charset "utf-8";
+
+/*========= 背景動画設定のCSS ===============*/
+*{
+    margin: 0px;
+    padding: 0px;
+}
+/*header設定*/
+#header{
+    position: relative;/*h1の中央寄せ配置の起点とするためのrelative*/
+    height: 100vh;/*高さを全画面にあわせる*/
+} 
+
+body {
+    background-image: url(comingsoon.jpg);
+    background-size: cover;
+   }
+
+h1{
+    /*要素の配置*/
+    position:absolute;
+    /*要素を天地中央寄せ*/
+    font-size: 50px;
+    top: 30%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%) ;
+    /*見た目の調整*/
+    color:#fff;
+    text-shadow: 0 0 20px #750606;
+}
+
+.btn_comingsoon{
+    /*線の基点とするためrelativeを指定*/
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: inline-block;
+    color: #12555c;
+    
+    padding: 10px 20px;
+    background:#eee;
+    text-decoration: none;
+    outline: none;
+    /*アニメーションの指定*/
+    transition: all .3s;
+    transition-delay: .7s;/*0.7秒遅れてアニメーション*/
+}
+
+/*hoverした際の、ボタンの背景とテキスト色の変更*/
+.btn_comingsoon:hover{
+  background:#333;
+  color: #fff;
+}
+
+/*線の設定*/
+.btn_comingsoon span{
+    display: block;
+}
+
+/*横線の設定*/
+.btn_comingsoon::before,
+.btn_comingsoon::after{
+    content:"";
+    /*絶対配置で線の位置を決める*/   
+    position: absolute;
+    /*線の形状*/   
+    width: 0;
+    height: 2px;
+    background: #333;
+    /*アニメーションの指定*/
+    transition: all 0.2s linear;
+}
+
+/*縦線の設定*/
+.btn_comingsoon span::before,
+.btn_comingsoon span::after{
+    content:"";
+    /*絶対配置で線の位置を決める*/   
+    position: absolute;
+    /*線の形状*/
+    width:2px;
+    height:0;
+    background: #333;
+    /*アニメーションの指定*/
+    transition: all 0.2s linear;
+}
+
+/*hoverした際、線が縦横100%伸びる*/
+.btn_comingsoon:hover::before,
+.btn_comingsoon:hover::after{
+    width: 100%;
+}
+.btn_comingsoon:hover span::before,
+.btn_comingsoon:hover span::after{
+    height: 100%;
+}
+
+/*== 左下⇒右下⇒右上⇒左上⇒左下に枠線が伸びて塗りに */
+
+/*左下から右下へ伸びる横線*/
+.border::after{
+    left: 0;
+    bottom: 0;
+}
+
+/*右下から上へ伸びる縦線*/
+.border span::after{
+    right: 0;
+    bottom: 0;
+    transition-delay: 0.2s;
+}
+
+/*右上から左上へ伸びる横線*/
+.border::before{
+    right: 0;
+    top: 0;
+    transition-delay: 0.4s;
+}
+
+/*左上から左下へ伸びる横線*/
+.border span::before{
+    left: 0;
+    top: 0;
+    transition-delay: 0.6s;
+}
