@@ -65,6 +65,18 @@ h1{
     color:#fff;
     text-shadow: 0 0 20px #666;
 }
+p{
+    /*要素の配置*/
+    position: absolute;
+    /*要素を天地中央寄せ*/
+    font-size: 20px;
+    top: 75%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%) ;
+    /*見た目の調整*/
+    color:#fff;
+    text-shadow: 0 0 20px #666;
+}
 .btn1{
     /*線の基点とするためrelativeを指定*/
     position: absolute;

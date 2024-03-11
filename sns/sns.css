@@ -1,0 +1,87 @@
+@charset "utf-8";
+
+/*========= 背景動画設定のCSS ===============*/
+*{
+    margin: 0px;
+    padding: 0px;
+}
+/*header設定*/
+#header{
+    position: relative;/*h1の中央寄せ配置の起点とするためのrelative*/
+    height: 100vh;/*高さを全画面にあわせる*/
+} 
+body {
+    background-image: url("photo/snsback.jpg");
+    background-size: cover;
+  }
+
+h1{
+    /*要素の配置*/
+    position:absolute;
+    /*要素を天地中央寄せ*/
+    font-size: 100px;
+    top: 20%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%) ;
+    /*見た目の調整*/
+    color:#ffffff;
+    text-shadow: 0 0 20px #666;
+}
+.class1{
+    position: absolute;
+    top:300px;
+    left:400px;
+}
+.gradient1{
+    /*ボタンの形状*/
+    position: absolute;
+    top: 45%;
+    left: 40%;
+    width: 250px; /* 幅を指定 */
+    height: 40px; /* 高さを指定 */
+    display: inline-block;
+    color:#fff;
+    text-align: center;
+    font-size: 25px;
+    padding: 10px 60px;
+    border-radius:30px;
+    text-decoration: none;
+    outline: none;
+    /*背景の色と形状*/
+    background: linear-gradient(270deg, #3bade3 0%, #576fe6 25%, #9844b7 51%, #ff357f 100%);
+    background-position: 1% 50%;
+    background-size: 200% auto;
+    /*アニメーションの指定*/
+    transition: all 0.3s ease-out;
+}
+
+/*hoverした際の、背景の場所とテキスト色の変更*/
+.gradient1:hover {
+    color: #fff;
+    background-position: 99% 50%;
+}
+
+p1{
+    /*要素の配置*/
+    position: absolute;
+    /*要素を天地中央寄せ*/
+    font-size: 40px;
+    top: 35%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%) ;
+    /*見た目の調整*/
+    color:#fff;
+    text-shadow: 0 0 20px #666;
+}
+p2{
+    /*要素の配置*/
+    position: absolute;
+    /*要素を天地中央寄せ*/
+    font-size: 30px;
+    top: 41%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%) ;
+    /*見た目の調整*/
+    color:#c9e745;
+    text-shadow: 0 0 20px #666;
+}
