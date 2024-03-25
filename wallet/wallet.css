@@ -1,0 +1,93 @@
+@charset "utf-8";
+
+/*========= 背景動画設定のCSS ===============*/
+*{
+    margin: 0px;
+    padding: 0px;
+}
+/*header設定*/
+#header{
+    position: relative;/*h1の中央寄せ配置の起点とするためのrelative*/
+    height: 100vh;/*高さを全画面にあわせる*/
+} 
+body {
+    background-image: url("photo/wallet.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+
+h1{
+    /*要素の配置*/
+    position:absolute;
+    /*要素を天地中央寄せ*/
+    font-size: 80px;
+    top: 20%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%) ;
+    /*見た目の調整*/
+    color:#ffffff;
+    text-shadow: 0 0 20px #666;
+}
+h2{
+    /*要素の配置*/
+    position:absolute;
+    /*要素を天地中央寄せ*/
+    font-size: 40px;
+    top: 40%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%) ;
+    /*見た目の調整*/
+    color:#fbff00;
+    text-shadow: 0 0 20px #666;
+}
+p{
+    position: absolute;
+    top:350px;
+}
+/* 目次全体 */
+.mokuji {
+    position: absolute;
+    color: #333;
+    background: #ccc;
+    top: 600px;
+    width: 600px;
+    left: 20%;
+    border: solid 1px #aaa;
+    border-radius: 15px;
+    padding: 15px;
+    margin: 5px 5%;
+  }
+  
+  /* 目次の見出し */
+  .mokuji-midashi {
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 25px;
+  }
+  
+  /* レスポンシブデザイン（スマホ用） */
+  @media (max-width: 560px) {
+    .mokuji {
+      padding: 10px 5px;
+      margin: 5px 1%;
+    }
+    .mokuji-midashi {
+      font-size: 13px;
+    }
+  }
+.class2{
+    position: absolute;
+    top:1000px;
+    left:400px;
+}
+h3{
+    /*要素の配置*/
+  font-size: 20px;
+    top: 50%;
+    transform: translateY(-50%) translateX(-50%) ;
+    /*見た目の調整*/
+    color:#fbff00;
+    text-shadow: 0 0 20px #666;
+}

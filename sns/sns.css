@@ -19,7 +19,7 @@ h1{
     /*要素の配置*/
     position:absolute;
     /*要素を天地中央寄せ*/
-    font-size: 100px;
+    font-size: 80px;
     top: 20%;
     left: 50%;
     transform: translateY(-50%) translateX(-50%) ;
