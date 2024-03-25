@@ -41,27 +41,27 @@ h2{
     color:#fbff00;
     text-shadow: 0 0 20px #666;
 }
-p{
-    position: absolute;
-    top:350px;
+.choice{
+  position: absolute;
+  top: 45%;
 }
 /* 目次全体 */
 .mokuji {
-    position: absolute;
-    color: #333;
-    background: #ccc;
-    top: 600px;
-    width: 600px;
-    left: 20%;
+    background-color: rgba(0,0,0,.5);
+    color: #fff;
+    position:absolute;
+    top: 80%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%) ;
+    width: 40%;
     border: solid 1px #aaa;
     border-radius: 15px;
     padding: 15px;
-    margin: 5px 5%;
   }
   
   /* 目次の見出し */
   .mokuji-midashi {
-    font-size: 15px;
+    font-size: 30px;
     font-weight: bold;
     text-align: center;
     margin-bottom: 25px;
@@ -82,12 +82,81 @@ p{
     top:1000px;
     left:400px;
 }
-h3{
-    /*要素の配置*/
-  font-size: 20px;
-    top: 50%;
-    transform: translateY(-50%) translateX(-50%) ;
-    /*見た目の調整*/
-    color:#fbff00;
-    text-shadow: 0 0 20px #666;
+.center{
+  text-align: center;
+  padding: 15px;
+}
+.btn{
+  /*影の基点とするためrelativeを指定*/
+  position: relative;
+  /*ボタンの形状*/
+text-decoration: none;
+display: inline-block;
+width: 500px; /* 幅を指定 */
+    height: 20px; /* 高さを指定 */
+  text-align: center;
+  background: transparent;
+border-radius: 25px;
+border: solid 1px #333;
+  outline: none;
+  /*アニメーションの指定*/
+  transition: all 0.2s ease;
+}
+
+/*hoverをした後のボタンの形状*/
+.btn:hover{
+border-color:transparent; 
+}
+
+/*ボタンの中のテキスト*/
+.btn span {
+position: relative;
+z-index: 2;/*z-indexの数値をあげて文字を背景よりも手前に表示*/
+  /*テキストの形状*/
+display: block;
+  padding: 10px 30px;
+background:#fff;
+border-radius: 25px;
+color:#333;
+  /*アニメーションの指定*/
+  transition: all 0.3s ease;
+}
+
+/*== 右下に押し込まれる（立体が平面に） */
+
+/*影の設定*/
+.pushright:before {
+  content: "";
+  /*絶対配置で影の位置を決める*/
+  position: absolute;
+z-index: -1;
+  top: 4px;
+  left: 4px;
+  /*影の形状*/
+  width: 100%;
+  height: 100%;
+border-radius: 25px;
+  background-color: #333;
+}
+
+/*hoverの際にX・Y軸に4pxずらす*/
+.pushright:hover span {
+background-color: #333;
+color: #fff;
+transform: translate(4px, 4px);
+}
+h4{
+  color:#fbff00;
+}
+.Coincheck{
+  margin: 20px;
+}
+h5{
+  margin-top: 70px;
+}
+h6{
+  color:#fbff00;
+}
+.Bybit{
+  margin: 20px;
 }
