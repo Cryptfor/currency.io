@@ -65,6 +65,11 @@ h1{
     color:#fff;
     text-shadow: 0 0 20px #666;
 }
+.main{
+    position: absolute;
+  top: 15%;
+  left: 20%;
+}
 p1{
     /*要素の配置*/
     position: absolute;
