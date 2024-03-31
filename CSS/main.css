@@ -17,17 +17,18 @@ html {
     height: 10vh;/*高さを全画面にあわせる*/
 } 
 /*========= レイアウトのためのCSS ===============*/
-body{
-    height: 80%;
-    text-align: center;
-}
-.fullheight {
-    height: 80%;
-  }
 .main{
     position: relative;
     top: 20%;
 }
+body{
+    height: 80%;
+    text-align: center;
+}
+  
+.fullheight {
+    height: 80%;
+  }
 p{
     color: #fff;
 }
@@ -1367,12 +1368,35 @@ h4{
     z-index: -1;
 }
 .slant-bg3 {
+    width: 100%;
+    margin: 20px;
+    padding: 150px 0;
+    position: relative;
+    top: 200px;
+    
+}
 
+.slant-bg3::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0,0,0,.5);
+    z-index: -2;
+}	
+footer {
+      margin-top: 0;
+      height:0px;
+      bottom: 0;
+      background-color: rgba(0,0,0,.5);
+      /* 背景色などは割愛します */
+}
 /*========= レイアウトのためのCSS ===============*/
 
 #container{
   background:#fff;
-  padding:300px 0;
+  padding: 0;
   text-align: center;
 }
 
