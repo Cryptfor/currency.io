@@ -20,6 +20,13 @@ html {
 .main{
     position: relative;
     top: 20%;
+    transform: translateY(50px);
+ transition: 3s;
+ opacity: 0;
+}
+.main.anim {
+ opacity: 1;
+ transform: translateY(0px);
 }
 body{
     height: 80%;
