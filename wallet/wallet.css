@@ -194,9 +194,11 @@ EDIT ON
 /*==================================================
 スライダーのためのcss
 ===================================*/
-.slider {/*横幅94%で左右に余白を持たせて中央寄せ*/
-  width:94%;
-  position: absolute;/*絶対配置にする*/
+.slider {
+  width: 94%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
   margin-top: 50px;
 }
 
