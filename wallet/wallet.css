@@ -196,6 +196,7 @@ EDIT ON
 ===================================*/
 .slider {/*横幅94%で左右に余白を持たせて中央寄せ*/
   width:94%;
+  position: absolute;/*絶対配置にする*/
   margin-top: 50px;
 }
 
@@ -237,7 +238,7 @@ opacity: 1;/*透過なし*/
 }
 
 .slick-next {/*次へ矢印の位置と形状*/
-  right: 1%;
+  right: 2%;
   transform: rotate(45deg);
 }
 
