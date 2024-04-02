@@ -11,7 +11,7 @@
     height: 100vh;/*高さを全画面にあわせる*/
 } 
 body {
-  background-image: url("photo/choice.jpg");
+  background-image: url("photo/wallet.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
