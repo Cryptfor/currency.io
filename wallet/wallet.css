@@ -185,15 +185,8 @@ h2{
   background-color: rgba(0,0,0,.5);
   z-index: -1;
 }
-/*==================================================
-HTML  CSS  JS Result  
-EDIT ON
 
- @charset "utf-8";
 
-/*==================================================
-スライダーのためのcss
-===================================*/
 .slider {/*横幅94%で左右に余白を持たせて中央寄せ*/
     width:94%;
     margin:0 auto;
@@ -205,13 +198,13 @@ EDIT ON
 }
 
 .slider .slick-slide {
-	transform: scale(0.8);/*左右の画像のサイズを80%に*/
+	transform: scale(0.6);/*左右の画像のサイズを80%に*/
 	transition: all .5s;/*拡大や透過のアニメーションを0.5秒で行う*/
 	opacity: 0.5;/*透過50%*/
 }
 
 .slider .slick-slide.slick-center{
-	transform: scale(1);/*中央の画像のサイズだけ等倍に*/
+	transform: scale(0.8);/*中央の画像のサイズだけ等倍に*/
 	opacity: 1;/*透過なし*/
 }
 
