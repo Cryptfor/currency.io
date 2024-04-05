@@ -11,10 +11,21 @@
     height: 100vh;/*高さを全画面にあわせる*/
 } 
 body {
-    background-image: url("photo/snsback.jpg");
-    background-size: cover;
+    height: 80%;
+    text-align: center;
+}
+  .fullheight {
+    height: 80%;
   }
-
+  #video-area{
+    position: fixed;
+    z-index: -1;/*最背面に設定*/
+    top: 0;
+    right:0;
+    left:0;
+    bottom:0;
+    overflow: hidden;
+}
 h1{
     /*要素の配置*/
     position:absolute;
