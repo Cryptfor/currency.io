@@ -184,13 +184,15 @@ p1{
   position:absolute;
   top: 100px;
   left: 42%;
+  font-size:x-large;
   color: #fff;
   text-align: center;
 }
 p2{
   position:absolute;
-  top: 290px;
+  top: 410px;
   left: 46%;
+  font-size:x-large;
   color: #fff;
   text-align: center;
 }
@@ -203,7 +205,7 @@ p2{
 .slider {/*横幅94%で左右に余白を持たせて中央寄せ*/
     width:94%;
     margin:0 auto;
-    top: 120px;
+    top: 230px;
 }
 
 .slider img {
@@ -253,7 +255,7 @@ p2{
 .slick-dots {
   position: absolute;/*絶対配置にする*/
     left: 48%;
-    top: 390px;
+    top: 580px;
 	margin:5px 0 0 0;
 }
 
@@ -339,9 +341,81 @@ transform: rotate(-45deg);
 /*アコーディオンで現れるエリア*/
 .box {
   display: none;/*はじめは非表示*/
-  background: #f3f3f3;
+  background: #000000;
 margin:0 3% 3% 3%;
   padding: 3%;
+}
+p{
+  margin-top: 2%;
+  color:#ffffff;
+}
+.table1 { 
+  margin: auto;
+  border-collapse: collapse;
+  border: 1px solid #ffffff;
+}
+
+.th {
+  border: 1px solid #ffffff;
+  background: #ffbb1e;
+  padding: 20px;
+}
+
+.td {
+  background: #272727;
+  border: 1px solid #ffffff;
+  color: #fff;
+  padding: 20px;
+}
+
+.btntextchange{
+  /*テキストの基点とするためrelativeを指定*/
+position: relative;
+  /*ボタンの形状*/
+border: 1px solid #9dff00;
+border-radius:25px;
+  min-width:210px;
+padding: 20px;
+  text-align: center;
+display: inline-block;
+  text-decoration: none;
+  color: #ffffff;
+  outline: none;
+  /*アニメーションの指定*/
+  transition: all .2s;
+}
+
+/*hoverした際の変化*/
+.btntextchange:hover{
+background:#333;
+color:#fff;
+}
+
+.btntextchange span{
+  /*絶対配置でテキストの位置を決める*/
+position: absolute;
+left: 50%;
+top:50%;
+  transform:translate(-50%,-50%);
+  /*アニメーションの指定*/
+  transition: all .5s;
+/*ブロック要素にしてテキスト折り返しなし*/  
+display: block;
+white-space: nowrap;
+}
+
+/*差し替わるテキストの設定*/
+.btntextchange span:nth-child(2){
+opacity:0;/*透過0に*/
+}
+
+/*hoverするとテキストが入れ替わる設定*/
+.btntextchange:hover span:nth-child(1){
+opacity:0;/*透過0に*/
+}
+
+.btntextchange:hover span:nth-child(2){
+opacity:1;/*不透明に*/
 }
 
 /*========= レイアウトのためのCSS ===============*/
