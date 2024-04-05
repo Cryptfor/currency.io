@@ -341,7 +341,7 @@ transform: rotate(-45deg);
 /*アコーディオンで現れるエリア*/
 .box {
   display: none;/*はじめは非表示*/
-  background: #000000;
+  background: rgba(0,0,0,.5);
 margin:0 3% 3% 3%;
   padding: 3%;
 }
